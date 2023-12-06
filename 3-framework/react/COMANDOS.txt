@@ -1,0 +1,10 @@
+1-descargar e instalar nodejs
+2-seleccionar en que carpeta se va a hacer el proceso
+C:\Users\COOTEP\Documents\programacion\desarroJavascript\react
+
+3-abrir una terminal escribir el siguiente codigo
+npx create-react-app nombreDeAplicacion
+
+4-iniciar el servicio
+npm start
+

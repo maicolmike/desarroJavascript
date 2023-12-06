@@ -1,0 +1,15 @@
+1-descargar e instalar nodejs
+2-seleccionar en que carpeta se va a hacer el proceso
+C:\Users\COOTEP\Documents\programacion\desarroJavascript\angular
+
+3-abrir una terminal escribir el siguiente codigo
+ng new miprimerproyecto
+
+4- cd C:\Users\COOTEP\Documents\programacion\desarroJavascript\angular\miprimerproyecto
+
+5-iniciar el servicio
+ng serve
+
+6-crear un componente
+ng generate component primercomponente
+ng g c primercomponente

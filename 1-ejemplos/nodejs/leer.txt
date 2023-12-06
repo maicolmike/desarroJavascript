@@ -1,0 +1,7 @@
+1-callbacks
+--en un terminal colocar
+npm install request
+
+2-promesas
+--en un terminal colocar
+npm install request-promise
