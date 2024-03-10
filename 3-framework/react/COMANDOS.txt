@@ -8,3 +8,21 @@ npx create-react-app nombreDeAplicacion
 4-iniciar el servicio
 npm start
 
+_________________________________________----_----____________________________________
+ejercicio itp
+ejercicio 1
+npm i -g servor
+servor --reload
+
+ejercicio 2
+npx create-next-app@latest
+ingresamos a la carpeta que creamos y ponemos esto
+nvm install 20
+node -v
+nvm use 20.11.1
+reinstalar paquetes
+npm ci
+npm run start   // sino funciona el otro comando
+npm run dev
+
+
