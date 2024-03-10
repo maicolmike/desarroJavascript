@@ -1,6 +1,7 @@
 'use client'
 import React from "react"; // importar react
 import ListadoTareas from "@/components/ListadoTareas";
+import MensajeError from '@/components/MensajeError';
 
 export default function Ejercicio() {
     const [nuevoTodo, setNuevoTodo] = React.useState('');
@@ -46,7 +47,7 @@ export default function Ejercicio() {
                 onKeyDown={agregarConEnter}
             />
             <button onClick={agregarTodo}>Agregar</button>
-            {error ? <p style={{ color: 'red' }}>{error}</p> : null}
+            <MensajeError error={error} />
             <ListadoTareas todos={todos} onEliminar={eliminarTodo} />
         </main>
     )
