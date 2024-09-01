@@ -12,3 +12,13 @@
 <h2>{{ 'hola '.repeat(4)}}</h2>
 <p>La suma de 3 + 3 es {{ 3 + 3 }}</p>
 <p>hola soy {{ name }} y mi edad es {{ age }}</p>
+
+
+<img [src]="img" alt="">
+<input type="text" [value]='name'>
+<button [disabled]="disabled">click</button>
+
+<p>nombre de la persona: {{ person.name }}</p>
+<img [src]="person.avatar" alt="">
+<input type="number" [value]='person.age'>
+
