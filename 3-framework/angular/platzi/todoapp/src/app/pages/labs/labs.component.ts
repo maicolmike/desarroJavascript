@@ -17,4 +17,6 @@ export class LabsComponent {
     'proyecto',
     'componente'
   ]
+  name = 'Maicol yela';
+  age = 18;
 }
