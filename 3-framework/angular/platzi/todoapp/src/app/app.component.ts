@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common'; // Importa CommonModule aquí
 export class AppComponent {
   title = 'todoapp';
   welcome = 'hola mundo p';
-  task = [
+  tasks = [
     'instalar',
     'proyecto',
     'componente'
