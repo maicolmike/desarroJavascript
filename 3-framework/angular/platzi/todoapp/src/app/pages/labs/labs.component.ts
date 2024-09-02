@@ -30,6 +30,12 @@ person = {
 }
 
 
+clickHandler(){
+  alert('hola')
+}
 
+changeHandler(event: Event){
+  console.log(event);
+}
 
 }
