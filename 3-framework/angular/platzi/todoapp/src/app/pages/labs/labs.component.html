@@ -25,8 +25,25 @@
 
 <hr>
 
+<!-- lanzar mensaje-->
 <button (click)="clickHandler()" style="background-color: blue;">un click</button>
 <button (dblclick)="clickHandler()" style="background-color: rgb(145, 255, 0);">doble click</button>
+
+<!-- cambia el evento-->
 <p>(change)</p>
 <input type="number" [value]='person.age' (change)="changeHandler($event)">
+
+<p>(change)</p>
+<input type="text" [value]='person.name' (change)="changeHandler($event)">
+
+<!-- presiona una tecla -->
+<p>(keydown)</p>
+<input type="text" [value]='person.name' (keydown)="keydownHandler($event)">
+
+<!-- cuando presiona ese comando shift t se hace el evento-->
+<p>(keydown shift t)</p>
+<input type="text" [value]='person.name' (keydown.shift.t)="clickHandler()">
+<p>(keydown shift t)</p>
+<input type="text" [value]='person.name' (keydown.shift.t)="changeHandler($event)">
+
 </div>
