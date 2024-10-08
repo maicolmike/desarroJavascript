@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,signal } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Asegúrate de importar CommonMod
 import { RouterOutlet } from '@angular/router';
 
@@ -10,5 +10,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  tasks2 = signal([
+    'instalar',
+    'proyecto',
+    'componente',
+    'correr'
+  ])
 
 }

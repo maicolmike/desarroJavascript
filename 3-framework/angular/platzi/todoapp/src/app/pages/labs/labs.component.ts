@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Asegúrate de importar CommonMod
 import { RouterOutlet } from '@angular/router';
 
@@ -21,10 +21,18 @@ export class LabsComponent {
   age = 18;
   disabled = true;
   img = 'https://w3schools.com/howto/img_avatar.png';
+  name2 = signal('Maicol yela');
+  name3 = signal('Maicol yela 11');
+
+  tasks2 = signal([
+    'instalar',
+    'proyecto',
+    'componente'
+  ])
 
 
 person = {
-  name:'maicol',
+  name:'Maicol',
   age: 18,
   avatar: 'https://w3schools.com/howto/img_avatar.png'
 }
@@ -41,6 +49,18 @@ changeHandler(event: Event){
 keydownHandler(event: KeyboardEvent){
   const input = event.target as HTMLInputElement;
   console.log(input.value);
+}
+
+changeHandler2(event: Event){
+  const input = event.target as HTMLInputElement;
+  const newValue = input.value;
+  this.name2.set(newValue);
+}
+
+keydownHandler2(event: KeyboardEvent){
+  const input = event.target as HTMLInputElement;
+  const newValue = input.value;
+  this.name3.set(newValue);
 }
 
 }

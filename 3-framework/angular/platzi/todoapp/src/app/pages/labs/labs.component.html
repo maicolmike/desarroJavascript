@@ -1,38 +1,51 @@
 <div class="containerMaicol">
-  <h1>Hola Mundo</h1>
-<h2>{{ welcome }}</h2>
+  <hr>
 
-<ul>
-  <li *ngFor="let task of tasks">
-    {{ task }}
-  </li>
-</ul>
+  <h1>*** Mostrando elementos 1 ***</h1>
+  <h1>Hola Mundo</h1>
+  <h2>{{ welcome }}</h2>
+  
+  <ul>
+    <li *ngFor="let task of tasks">
+      {{ task }}
+    </li>
+  </ul>
 
 <hr>
 
+<h1>*** Mostrando elementos 2 ***</h1>
 <h2>{{ 'hola '.repeat(4)}}</h2>
 <p>La suma de 3 + 3 es {{ 3 + 3 }}</p>
 <p>hola soy {{ name }} y mi edad es {{ age }}</p>
 
+<hr>
 
+<h1>*** Property Binding en Angular ***</h1>
 <img [src]="img" alt="">
 <input type="text" [value]='name'>
 <button [disabled]="disabled">click</button>
 
-<p>nombre de la persona: {{ person.name }}</p>
+
+<h1>*** Crear un objeto ***</h1>
+<p>Nombre de la persona: {{ person.name }}</p>
 <img [src]="person.avatar" alt="">
 <input type="number" [value]='person.age'>
 
 <hr>
-
+<h1>*** Event Binding: click y doble click ***</h1>
 <!-- lanzar mensaje-->
-<button (click)="clickHandler()" style="background-color: blue;">un click</button>
-<button (dblclick)="clickHandler()" style="background-color: rgb(145, 255, 0);">doble click</button>
+<button (click)="clickHandler()" style="background-color: rgb(9, 150, 231);">Dame un click</button>
+<br>
+<br>
+<button (dblclick)="clickHandler()" style="background-color: rgb(145, 255, 0);">Dame doble click</button>
 
 <!-- cambia el evento-->
+ <h1>*** Pasar un evento a una funcion ***</h1>
 <p>(change)</p>
 <input type="number" [value]='person.age' (change)="changeHandler($event)">
 
+<hr>
+<h1>*** Event binding: keydown ***</h1>
 <p>(change)</p>
 <input type="text" [value]='person.name' (change)="changeHandler($event)">
 
@@ -41,9 +54,30 @@
 <input type="text" [value]='person.name' (keydown)="keydownHandler($event)">
 
 <!-- cuando presiona ese comando shift t se hace el evento-->
-<p>(keydown shift t)</p>
+<p>(keydown shift t clickHandler)</p>
 <input type="text" [value]='person.name' (keydown.shift.t)="clickHandler()">
-<p>(keydown shift t)</p>
+<p>(keydown shift t changeHandler)</p>
 <input type="text" [value]='person.name' (keydown.shift.t)="changeHandler($event)">
+
+<hr>
+<h1>*** Creando un Signal en Angular ***</h1>
+<p>(change)</p>
+<input type="text" [value]="name2()" (change)="changeHandler2($event)">
+<p>hola soy {{ name2() }} </p>
+
+<p>(keydown)</p>
+<input type="text" [value]='name3()' (keydown)="keydownHandler2($event)">
+<p>hola soy {{ name3() }} </p>
+
+<hr>
+<h1>*** Directivas de control ***</h1>
+<ul>
+  <li *ngFor="let task of tasks2(); index as i">
+    {{ i }} {{ task }}
+  </li>
+</ul>
+
+<p>Total de elementos en la lista {{ tasks2().length }}</p>
+
 
 </div>
